@@ -1,0 +1,8 @@
+<span *ngFor="let item of rateArray;let index = index">
+  <mat-icon
+  [ngClass]="{checked:selectedRate>index}"
+  (mouseenter)="onMouseEnter(index)"
+  (mouseleave)="onMouseLeave()"
+  (click)="saveRate(index)"
+  >star</mat-icon>
+</span>
