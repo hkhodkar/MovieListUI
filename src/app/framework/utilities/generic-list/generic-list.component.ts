@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'generic-list',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./generic-list.component.css']
 })
 export class GenericListComponent implements OnInit {
+
+  @Input() list:any[];
 
   constructor() { }
 

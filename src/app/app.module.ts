@@ -8,11 +8,14 @@ import { MoviesModule } from './movies/movies.module';
 import { ThemeModule } from './theme/theme/theme.module';
 import { MaterialModule } from './material/material.module';
 import { UtilityModule } from './framework/utilities/utility.module';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     ThemeModule,
+    RouterModule,
     MoviesModule,
     BrowserModule,
     UtilityModule,
