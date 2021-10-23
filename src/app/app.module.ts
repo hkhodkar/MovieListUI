@@ -4,23 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './framework/utilities/material/material/material.module';
+import { MoviesModule } from './movies/movies.module';
 import { ThemeModule } from './theme/theme/theme.module';
-import { StarRatingComponent } from './framework/utilities/star-rating/star-rating.component';
+import { MaterialModule } from './material/material.module';
+import { UtilityModule } from './framework/utilities/utility.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StarRatingComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
-     ThemeModule,
+    ThemeModule,
+    MoviesModule,
     BrowserModule,
+    UtilityModule,
     MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
