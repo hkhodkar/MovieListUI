@@ -10,7 +10,8 @@ import { ActorCreatingModel } from '../model/actor-creating.model';
 export class FormActorComponent implements OnInit {
   public form: FormGroup;
 
-  @Input() model: ActorCreatingModel;
+  @Input() model: any;
+
   @Output() onSaveChanges = new EventEmitter<ActorCreatingModel>();
 
   constructor(private readonly fb: FormBuilder) {}
@@ -22,10 +23,15 @@ export class FormActorComponent implements OnInit {
     this.form = this.fb.group({
       name: ['', Validators.required],
       dateOfBirth: [''],
+      image:''
     });
     if (this.model !== undefined) {
       this.form.patchValue(this.model);
     }
+  }
+
+  onImageSelected(file:File){
+    this.form.get('image')?.setValue(file);
   }
 
   save() {

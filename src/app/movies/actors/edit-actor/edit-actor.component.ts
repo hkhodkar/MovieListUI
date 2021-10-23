@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ActorCreatingModel } from '../model/actor-creating.model';
+import { ActorCreatingModel, ActorModel } from '../model/actor-creating.model';
 
 @Component({
   selector: 'app-edit-actor',
@@ -11,7 +11,7 @@ export class EditActorComponent implements OnInit {
 
   constructor(private route:ActivatedRoute) { }
 
-  model:ActorCreatingModel = {name:'tom holland',dateOfBirth:new Date()}
+  model:ActorModel = {name:'tom holland',dateOfBirth:new Date(),image:'asd'}
 
   ngOnInit(): void {
     this.route.params.subscribe(params =>{
