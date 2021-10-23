@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActorCreatingModel } from '../model/actor-creating.model';
 
 @Component({
   selector: 'app-create-actor',
@@ -13,8 +14,10 @@ export class CreateActorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  save(){
-    this.router.navigate(['/actors'])
+  save(value:ActorCreatingModel){
+    console.log(value);
   }
+
+
 
 }

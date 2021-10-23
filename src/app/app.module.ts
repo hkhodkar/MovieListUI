@@ -10,6 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { UtilityModule } from './framework/utilities/utility.module';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     UtilityModule,
     MaterialModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
   providers: [],

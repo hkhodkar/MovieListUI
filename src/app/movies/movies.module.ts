@@ -18,6 +18,9 @@ import { EditGenresComponent } from './genres/edit-genres/edit-genres.component'
 import { EditTheaterComponent } from './theaters/edit-theater/edit-theater.component';
 import { EditMoviesComponent } from './movies/edit-movies/edit-movies.component';
 import { MoviesComponent } from './movies/movies.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FilterMovieComponent } from './movies/filter-movie/filter-movie.component';
+import { FormActorComponent } from './actors/form-actor/form-actor.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,16 @@ import { MoviesComponent } from './movies/movies.component';
     EditGenresComponent,
     EditTheaterComponent,
     EditMoviesComponent,
-    MoviesComponent
+    MoviesComponent,
+    FilterMovieComponent,
+    FormActorComponent
   ],
   imports: [
     CommonModule,
     UtilityModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports:[
     MovieListComponent
