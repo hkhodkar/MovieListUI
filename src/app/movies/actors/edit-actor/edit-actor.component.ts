@@ -11,7 +11,7 @@ export class EditActorComponent implements OnInit {
 
   constructor(private route:ActivatedRoute) { }
 
-  model:ActorModel = {name:'tom holland',dateOfBirth:new Date(),image:'asd'}
+  model:ActorModel = {name:'tom holland',dateOfBirth:new Date(),image:'asd',biography:'bio'}
 
   ngOnInit(): void {
     this.route.params.subscribe(params =>{

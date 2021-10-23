@@ -10,16 +10,19 @@ import { MaterialModule } from './material/material.module';
 import { UtilityModule } from './framework/utilities/utility.module';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MarkdownModule} from 'ngx-markdown'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
     ThemeModule,
+    FormsModule,
     RouterModule,
     MoviesModule,
     BrowserModule,
     UtilityModule,
+    MarkdownModule.forChild(),
     MaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,

@@ -1,13 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-input-mardown',
+  selector: 'input-mardown',
   templateUrl: './input-mardown.component.html',
   styleUrls: ['./input-mardown.component.css']
 })
 export class InputMardownComponent implements OnInit {
 
+
+@Output() changeMarkDown = new EventEmitter<string>();
+
   constructor() { }
+
+  @Input()   markDownContent= '';
 
   ngOnInit(): void {
   }

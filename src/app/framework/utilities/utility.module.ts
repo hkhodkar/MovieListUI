@@ -5,6 +5,8 @@ import { GenericListComponent } from './generic-list/generic-list.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { InputImgComponent } from './input-img/input-img.component';
 import { InputMardownComponent } from './input-mardown/input-mardown.component';
+import { FormsModule } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
 
 
 
@@ -12,12 +14,15 @@ import { InputMardownComponent } from './input-mardown/input-mardown.component';
   declarations: [GenericListComponent,StarRatingComponent, InputImgComponent, InputMardownComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    MarkdownModule.forRoot()
   ],
   exports:[
     GenericListComponent,
     StarRatingComponent,
-    InputImgComponent
+    InputImgComponent,
+    InputMardownComponent
   ]
 })
 export class UtilityModule { }

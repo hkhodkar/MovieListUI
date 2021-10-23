@@ -23,7 +23,8 @@ export class FormActorComponent implements OnInit {
     this.form = this.fb.group({
       name: ['', Validators.required],
       dateOfBirth: [''],
-      image:''
+      image:'',
+      biography:''
     });
     if (this.model !== undefined) {
       this.form.patchValue(this.model);
@@ -32,6 +33,10 @@ export class FormActorComponent implements OnInit {
 
   onImageSelected(file:File){
     this.form.get('image')?.setValue(file);
+  }
+
+  changeMarkDown(content:any){
+    this.form.get('biography')?.setValue(content)
   }
 
   save() {

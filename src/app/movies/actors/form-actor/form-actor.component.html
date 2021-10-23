@@ -10,9 +10,15 @@
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-    <input-img [urlCurrentImage]="model?.image" (onImageSelected)="onImageSelected($event)"></input-img>
+
+  <h4>Select Picture</h4>
+  <input-img [urlCurrentImage]="model?.image" (onImageSelected)="onImageSelected($event)"></input-img>
+
+  <h4>Biography</h4>
+  <input-mardown [markDownContent]="model?.biography" (changeMarkDown)=changeMarkDown($event)></input-mardown>
+
   <div>
-    <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid" >Save</button>
+    <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">Save</button>
     <a mat-stroked-button routerLink="/actors">Cancel</a>
   </div>
 </form>
