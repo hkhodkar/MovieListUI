@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
-import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { UtilityModule } from '../framework/utilities/utility.module';
 import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 import { RouterModule } from '@angular/router';
@@ -12,7 +12,12 @@ import { IndexGenresComponent } from './genres/index-genres/index-genres.compone
 import { TheatersComponent } from './theaters/theaters.component';
 import { IndexMovieTheaterComponent } from './theaters/index-movie-theater/index-movie-theater.component';
 import { CreateMovieTheaterComponent } from './theaters/create-movie-theater/create-movie-theater.component';
-import { CreateMovieComponent } from './create-movie/create-movie.component';
+import { CreateMovieComponent } from './movies/create-movie/create-movie.component';
+import { EditActorComponent } from './actors/edit-actor/edit-actor.component';
+import { EditGenresComponent } from './genres/edit-genres/edit-genres.component';
+import { EditTheaterComponent } from './theaters/edit-theater/edit-theater.component';
+import { EditMoviesComponent } from './movies/edit-movies/edit-movies.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { CreateMovieComponent } from './create-movie/create-movie.component';
     TheatersComponent,
     IndexMovieTheaterComponent,
     CreateMovieTheaterComponent,
-    CreateMovieComponent
+    CreateMovieComponent,
+    EditActorComponent,
+    EditGenresComponent,
+    EditTheaterComponent,
+    EditMoviesComponent,
+    MoviesComponent
   ],
   imports: [
     CommonModule,
