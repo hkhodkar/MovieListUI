@@ -11,7 +11,7 @@ import { IndexGenresComponent } from './genres/index-genres/index-genres.compone
 
 import { TheatersComponent } from './theaters/theaters.component';
 import { IndexMovieTheaterComponent } from './theaters/index-movie-theater/index-movie-theater.component';
-import { CreateMovieTheaterComponent } from './theaters/create-movie-theater/create-movie-theater.component';
+import { CreateTheaterComponent } from './theaters/create-theater/create-theater.component';
 import { CreateMovieComponent } from './movies/create-movie/create-movie.component';
 import { EditActorComponent } from './actors/edit-actor/edit-actor.component';
 import { EditGenresComponent } from './genres/edit-genres/edit-genres.component';
@@ -21,6 +21,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterMovieComponent } from './movies/filter-movie/filter-movie.component';
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
+import { TheaterFormComponent } from './theaters/theater-form/theater-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { FormActorComponent } from './actors/form-actor/form-actor.component';
     CreateActorComponent,
     TheatersComponent,
     IndexMovieTheaterComponent,
-    CreateMovieTheaterComponent,
+    CreateTheaterComponent,
     CreateMovieComponent,
     EditActorComponent,
     EditGenresComponent,
@@ -39,7 +40,8 @@ import { FormActorComponent } from './actors/form-actor/form-actor.component';
     EditMoviesComponent,
     MoviesComponent,
     FilterMovieComponent,
-    FormActorComponent
+    FormActorComponent,
+    TheaterFormComponent
   ],
   imports: [
     CommonModule,

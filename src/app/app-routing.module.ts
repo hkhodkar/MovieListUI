@@ -7,10 +7,11 @@ import { IndexActorsComponent } from './movies/actors/index-actors/index-actors.
 import { CreateMovieComponent } from './movies/movies/create-movie/create-movie.component';
 import { CreateGenreComponent } from './movies/genres/create-genre/create-genre.component';
 import { IndexGenresComponent } from './movies/genres/index-genres/index-genres.component';
-import { CreateMovieTheaterComponent } from './movies/theaters/create-movie-theater/create-movie-theater.component';
+import { CreateTheaterComponent } from './movies/theaters/create-theater/create-theater.component';
 import { IndexMovieTheaterComponent } from './movies/theaters/index-movie-theater/index-movie-theater.component';
 import { EditMoviesComponent } from './movies/movies/edit-movies/edit-movies.component';
 import { FilterMovieComponent } from './movies/movies/filter-movie/filter-movie.component';
+import { EditTheaterComponent } from './movies/theaters/edit-theater/edit-theater.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,8 +24,8 @@ const routes: Routes = [
   { path: 'actors/edit/:id', component: EditActorComponent },
 
   { path: 'theaters', component: IndexMovieTheaterComponent },
-  { path: 'theaters/create', component: CreateMovieTheaterComponent },
-  { path: 'theaters/edit/:id', component: EditActorComponent },
+  { path: 'theaters/create', component: CreateTheaterComponent },
+  { path: 'theaters/edit/:id', component: EditTheaterComponent },
 
   { path: 'movies/create', component: CreateMovieComponent },
   { path: 'movies/edit/:id', component: EditMoviesComponent },

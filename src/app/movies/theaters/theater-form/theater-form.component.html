@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+  <mat-form-field appearance="outline">
+    <mat-label>name*</mat-label>
+    <input type="text" formControlName="name" matInput>
+    <mat-error>The name is required</mat-error>
+  </mat-form-field>
+
+  <div>
+    <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">Save</button>
+    <a mat-stroked-button routerLink="/movies-theaters">Cancel</a>
+  </div>
+</form>
