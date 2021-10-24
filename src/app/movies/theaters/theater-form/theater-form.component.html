@@ -5,6 +5,9 @@
     <mat-error>The name is required</mat-error>
   </mat-form-field>
 
+  <h4>Select the location of theater</h4>
+  <map (onSelectedLocation)="getCordinate($event)"></map>
+
   <div>
     <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">Save</button>
     <a mat-stroked-button routerLink="/movies-theaters">Cancel</a>

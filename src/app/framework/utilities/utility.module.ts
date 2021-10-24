@@ -7,22 +7,30 @@ import { InputImgComponent } from './input-img/input-img.component';
 import { InputMardownComponent } from './input-mardown/input-mardown.component';
 import { FormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
-
-
+import { MapComponent } from './map/map.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
-  declarations: [GenericListComponent,StarRatingComponent, InputImgComponent, InputMardownComponent],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    FormsModule,
-    MarkdownModule.forRoot()
-  ],
-  exports:[
+  declarations: [
     GenericListComponent,
     StarRatingComponent,
     InputImgComponent,
-    InputMardownComponent
-  ]
+    InputMardownComponent,
+    MapComponent,
+  ],
+  imports: [
+    CommonModule,
+    LeafletModule,
+    MaterialModule,
+    FormsModule,
+    MarkdownModule.forRoot(),
+  ],
+  exports: [
+    GenericListComponent,
+    StarRatingComponent,
+    InputImgComponent,
+    InputMardownComponent,
+    MapComponent,
+  ],
 })
-export class UtilityModule { }
+export class UtilityModule {}

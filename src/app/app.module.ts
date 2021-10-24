@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MarkdownModule} from 'ngx-markdown'
+import {LeafletModule} from '@asymmetrik/ngx-leaflet'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -21,6 +22,7 @@ import {MarkdownModule} from 'ngx-markdown'
     RouterModule,
     MoviesModule,
     BrowserModule,
+    LeafletModule,
     UtilityModule,
     MarkdownModule.forChild(),
     MaterialModule,
