@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+  <mat-form-field appearance="outline">
+    <mat-label>Title*</mat-label>
+    <input type="text" matInput formControlName="title">
+    <mat-error>The Title field is requiredd</mat-error>
+  </mat-form-field>
+
+  <div class="checkbox-container">
+    <mat-checkbox formControlName="inTheaters">In Theaters</mat-checkbox>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Trailer*</mat-label>
+    <input type="text" matInput formControlName="title">
+    <mat-error>The Trailer field is requiredd</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Release Date</mat-label>
+    <input type="text" formControlName="releaseDate" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <h4>Select the poster</h4>
+  <input-img [urlCurrentImage]="model?.poster || '' " (onImageSelected)="onImageSelected($event)"></input-img>
+
+  <h4>Summary</h4>
+  <input-mardown [markDownContent]="model?.summary || ''" (changeMarkDown)=changeMarkDown($event)>
+  </input-mardown>
+
+  <div>
+    <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">Save</button>
+    <a mat-stroked-button routerLink="/">Cancel</a>
+  </div>
+</form>

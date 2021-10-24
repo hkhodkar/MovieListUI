@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FilterMovieComponent } from './movies/filter-movie/filter-movie.component';
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { TheaterFormComponent } from './theaters/theater-form/theater-form.component';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TheaterFormComponent } from './theaters/theater-form/theater-form.compo
     MoviesComponent,
     FilterMovieComponent,
     FormActorComponent,
-    TheaterFormComponent
+    TheaterFormComponent,
+    FormMovieComponent
   ],
   imports: [
     CommonModule,
