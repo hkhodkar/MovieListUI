@@ -12,7 +12,8 @@ export class CreateMovieComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  save(){
+  save(data:any){
+    console.log(data);
     this.router.navigate(['/'])
   }
 

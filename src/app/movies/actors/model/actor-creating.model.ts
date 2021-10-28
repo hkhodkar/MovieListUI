@@ -11,3 +11,8 @@ export interface ActorModel {
   image:string;
   biography:string;
 }
+
+export interface SelectActorModel{
+  name:string;
+  picture:string;
+}

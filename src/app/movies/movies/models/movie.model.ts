@@ -13,4 +13,6 @@ export interface CreateMovieModel {
   inTheaters: boolean;
   releaseDate: Date;
   trailer: string;
+  genreIds: number[];
+  theatersIds: number[];
 }

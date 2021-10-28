@@ -29,6 +29,15 @@
   <input-mardown [markDownContent]="model?.summary || ''" (changeMarkDown)=changeMarkDown($event)>
   </input-mardown>
 
+  <h4>Select the genres</h4>
+  <multiple-selector [NonSelectedItems]="nonSelectedGenres" [SelectedItems]="selectedGenres"></multiple-selector>
+
+  <h4>Select the Theaters</h4>
+  <multiple-selector [NonSelectedItems]="nonSelectedTheaters" [SelectedItems]="selectedTheaters"></multiple-selector>
+
+  <h4>Select the Actors</h4>
+  <actors-autocompelete></actors-autocompelete>
+
   <div>
     <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">Save</button>
     <a mat-stroked-button routerLink="/">Cancel</a>

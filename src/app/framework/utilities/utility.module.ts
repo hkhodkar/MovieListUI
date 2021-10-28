@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
 import { MapComponent } from './map/map.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MultipleSelectorComponent } from './multiple-selector/multiple-selector.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     InputImgComponent,
     InputMardownComponent,
     MapComponent,
+    MultipleSelectorComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     InputImgComponent,
     InputMardownComponent,
     MapComponent,
+    MultipleSelectorComponent
   ],
 })
 export class UtilityModule {}
